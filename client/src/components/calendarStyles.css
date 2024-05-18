@@ -1,0 +1,20 @@
+.react-calendar__tile {
+    position: relative;
+  }
+  
+  .react-calendar__tile--hasEvents {
+    background-color: #e0f7fa;
+  }
+  
+  .react-calendar__tile--hasEvents::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #007bff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
