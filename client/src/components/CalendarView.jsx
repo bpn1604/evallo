@@ -120,7 +120,7 @@ const CalendarView = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/events');
+      const response = await axios.get('https://evallo-1.onrender.com');
       setEvents(response.data);
     } catch (err) {
       console.error('Error fetching events', err);
@@ -142,7 +142,7 @@ const CalendarView = () => {
 
   const handleDelete = async (eventId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/events/${eventId}`);
+      await axios.delete(`https://evallo-1.onrender.com/${eventId}`);
       fetchEvents();
     } catch (err) {
       console.error('Error deleting event', err);
