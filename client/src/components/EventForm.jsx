@@ -66,9 +66,9 @@ const EventForm = ({ date, closeModal, fetchEvents }) => {
     e.preventDefault();
     const newEvent = { ...formData, date };
     try {
-      await axios.post('http://localhost:5000/api/events', newEvent);
-      fetchEvents();  // Fetch the updated list of events
-      closeModal();   // Close the modal after submission
+      await axios.post('https://evallo-1.onrender.com', newEvent);
+      fetchEvents();  
+      closeModal();   
     } catch (err) {
       console.error(err);
     }
