@@ -120,7 +120,7 @@ const CalendarView = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await axios.get('https://evallo-1.onrender.com');
+      const response = await axios.get('https://evallo-1.onrender.com/');
       setEvents(response.data);
     } catch (err) {
       console.error('Error fetching events', err);
