@@ -1,4 +1,3 @@
-// app.js
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -10,8 +9,14 @@ const app = express();
 // Connect Database
 connectDB();
 
+// CORS configuration
+const corsOptions = {
+    origin: 'https://evallo-five.vercel.app', 
+    optionsSuccessStatus: 200
+};
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // Routes
